@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using static TraversalPro.Utility;
+using static TraversalPro.TraversalUtilities;
 
 namespace TraversalPro
 {
@@ -52,33 +52,6 @@ namespace TraversalPro
             float targetYaw = GetYaw(view.rotation);
             yaw = Mathf.SmoothDampAngle(yaw, targetYaw, ref yawVelocity, smoothTime);
             transform.rotation = Quaternion.Euler(0, yaw, 0);
-        }
-
-        // Helper: Yaw from Quaternion
-        private static float GetYaw(Quaternion orientation)
-        {
-            orientation.Normalize();
-            Vector3 forward = orientation * Vector3.forward;
-            if (forward.y > .9999f)
-            {
-                forward = orientation * -Vector3.up;
-            }
-            else if (forward.y < -.9999f)
-            {
-                forward = orientation * Vector3.up;
-            }
-            return Mathf.Atan2(forward.z, forward.x) * Mathf.Rad2Deg * -1 + 90;
-        }
-
-        // Helper: Validate required field
-        private static bool ValidateRequiredField<T>(MonoBehaviour owner, T value) where T : class
-        {
-            if (value == null)
-            {
-                Debug.LogError($"[{owner.GetType().Name}] Missing {typeof(T).Name} field on GameObject '{owner.name}'.");
-                return false;
-            }
-            return true;
         }
     }
 }
