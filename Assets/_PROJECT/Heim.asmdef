@@ -2,7 +2,8 @@
     "name": "Heim",
     "rootNamespace": "Heim",
     "references": [
-        "GUID:9c5c36387dbad3c42a679a06504cd387"
+        "GUID:9c5c36387dbad3c42a679a06504cd387",
+        "GUID:1491147abca9d7d4bb7105af628b223e"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
