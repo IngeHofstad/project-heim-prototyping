@@ -1,0 +1,16 @@
+{
+    "name": "Heim",
+    "rootNamespace": "Heim",
+    "references": [
+        "GUID:9c5c36387dbad3c42a679a06504cd387"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
